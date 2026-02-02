@@ -1,0 +1,52 @@
+data:
+  raw_path: "data/raw/Telco-Customer-Churn.csv"
+  processed_path: "data/processed/processed_data.csv"
+  test_size: 0.2
+  random_state: 42
+
+features:
+  numerical:
+    - tenure
+    - MonthlyCharges
+    - TotalCharges
+  
+  categorical:
+    - gender
+    - Partner
+    - Dependents
+    - PhoneService
+    - MultipleLines
+    - InternetService
+    - OnlineSecurity
+    - OnlineBackup
+    - DeviceProtection
+    - TechSupport
+    - StreamingTV
+    - StreamingMovies
+    - Contract
+    - PaperlessBilling
+    - PaymentMethod
+
+model:
+  type: "LogisticRegression"
+  params:
+    class_weight: "balanced"
+    max_iter: 1000
+    random_state: 42
+    solver: "lbfgs"
+
+evaluation:
+  primary_metric: "recall"
+  cv_folds: 5
+  threshold: 0.5
+
+business:
+  customer_lifetime_value: 1000
+  retention_cost: 100
+  target_recall: 0.75
+
+paths:
+  model_save: "models/logistic_model.pkl"
+  scaler_save: "models/scaler.pkl"
+  feature_names_save: "models/feature_names.pkl"
+  reports_dir: "reports/figures/"
