@@ -37,14 +37,14 @@ env/
 *.swo
 *~
 
-# Data
+# Data - Keep raw CSV files out of git
 data/raw/*.csv
 data/processed/*.csv
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 
-# Models
-models/*.pkl
+# Models - COMMENTED OUT so models can be deployed
+# models/*.pkl
 !models/.gitkeep
 
 # OS
