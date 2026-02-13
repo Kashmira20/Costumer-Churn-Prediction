@@ -1,15 +1,1 @@
-pandas==2.0.3
-numpy==1.26.4
-scikit-learn==1.8.0
-matplotlib==3.7.2
-seaborn==0.12.2
-plotly==5.15.0
-streamlit==1.25.0
-jupyter==1.0.0
-notebook==7.0.0
-pytest==7.4.0
-python-dotenv==1.0.0
-fastapi==0.109.0
-uvicorn[standard]==0.27.0
-pydantic==2.5.3
-python-multipart==0.0.6
+fastapi==0.109.0echo uvicorn[standard]==0.27.0echo pydantic==2.5.3echo pandas==2.0.3echo numpy==1.26.4echo scikit-learn==1.3.2echo python-multipart==0.0.6
